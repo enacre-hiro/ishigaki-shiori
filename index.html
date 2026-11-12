@@ -4,7 +4,7 @@
 <style>
 /* Layout: 1枚のしおりを縦に。表紙 → 4日分のカード(日ごとに色違い) → 持ち物と確認メモ */
 :root{
-  --bg:#FFF7F5; --card:#FFFFFF; --ink:#4A3B45; --muted:#8C7885; --line:#F3DCE0;
+  --bg:#FFFFFF; --soft:#FFF5F7; --card:#FFFFFF; --ink:#4A3B45; --muted:#8C7885; --line:#F3DCE0;
   --pink:#F2A7B8; --pink-s:#FDE8ED;
   --aqua:#7CC8CF; --aqua-s:#E1F4F5;
   --lav:#B9A8E0; --lav-s:#EFEAFA;
@@ -14,18 +14,8 @@
   --f-body:"Noto Sans JP","Hiragino Sans",sans-serif;
   --f-script:"Pinyon Script","Snell Roundhand",cursive;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#231B22; --card:#2E2430; --ink:#F5E8EC; --muted:#BBA6B1; --line:#43343F;
-  --pink:#E58CA2; --pink-s:#43303A; --aqua:#6DBBC2; --aqua-s:#1F3A3D;
-  --lav:#A593D6; --lav-s:#35304B; --sun:#E8A271; --sun-s:#443428;
-  --hero1:#4A3040; --hero2:#24454A; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#231B22; --card:#2E2430; --ink:#F5E8EC; --muted:#BBA6B1; --line:#43343F;
-  --pink:#E58CA2; --pink-s:#43303A; --aqua:#6DBBC2; --aqua-s:#1F3A3D;
-  --lav:#A593D6; --lav-s:#35304B; --sun:#E8A271; --sun-s:#443428;
-  --hero1:#4A3040; --hero2:#24454A; color-scheme:dark}
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.7;
+body{color-scheme:light;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.7;
   padding-block:0 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .wrap{max-width:640px;margin:0 auto}
 h1,h2,h3{font-family:var(--f-disp);margin:0;text-wrap:balance}
@@ -67,7 +57,7 @@ h1,h2,h3{font-family:var(--f-disp);margin:0;text-wrap:balance}
 .memo{font-size:12.5px;color:var(--muted);line-height:1.55;margin-top:1px}
 .ev.hi .ttl{font-family:var(--f-disp);font-weight:700}
 .chip{display:inline-block;margin-left:6px;padding:0 8px;border-radius:99px;font-size:11px;background:var(--sun-s);color:var(--ink);vertical-align:1px}
-.tip{margin:12px 0 2px;padding:12px 14px;border-radius:16px;background:var(--bg);font-size:13px;line-height:1.65}
+.tip{margin:12px 0 2px;padding:12px 14px;border-radius:16px;background:var(--soft);font-size:13px;line-height:1.65}
 .dayplain{padding:6px 0 2px;font-size:14px}
 /* extra */
 .sec{background:var(--card);border:1.5px solid var(--line);border-radius:26px;padding:20px 20px 16px;margin-bottom:18px}
